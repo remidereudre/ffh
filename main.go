@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"farfromhumans/data_import" // Importation correcte avec le chemin du package
+	"main/data_import" // Importation correcte avec le chemin du package
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"

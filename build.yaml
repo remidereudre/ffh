@@ -3,3 +3,6 @@ runtime: go1.x
 build:
   commands:
     - go build main.go
+build:
+  commands:
+    - go build -o main main.go
