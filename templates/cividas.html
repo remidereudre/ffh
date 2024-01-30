@@ -1,0 +1,118 @@
+{{define "content"}}
+<div class="page-main-container container-fluid content-margin">
+    <div class="row justify-content-center">
+        </div class="col-12">
+            <h1>Cividas</h1>
+            <p class="description">The main cividas of Far From Humans.</p>
+
+            <div class="row families-row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <h2 data-toggle="collapse" href="#collapseMain" role="button" aria-expanded="false" aria-controls="collapseMain">
+                        Main
+                    </h2>
+                    <div class="row family-row collapse justify-content-center show" id="collapseMain">
+
+                        {{range .}}
+                        <div class="col-10 my-2">
+                            <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                            <div class="row unite-row primary align-items-center">
+                                <div class="col-12">
+                                    <h4>{{if .System}}{{.System}}{{else}}N/A{{end}}</h4>
+                                </div>
+                                <div class="col-4">
+                                    <img src="/static/img/cividas/{{.ImageURL}}" class="img-fluid bg-white">
+                                </div>
+                                <div class="col-8">
+                                    <table class="table table-striped table-dark">
+                                        <tbody>
+                                            <tr>
+                                                <td scope="col">Localization</td><td scope="col">{{if .Localization}}{{.Localization}}{{else}}N/A{{end}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">League</td><td scope="col">{{if .League}}{{.League}}{{else}}N/A{{end}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">Population</td><td scope="col">{{if .Population}}{{.Population}}{{else}}N/A{{end}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">Population type</td><td scope="col">{{if .PopulationType}}{{.PopulationType}}{{else}}N/A{{end}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">Economy</td><td scope="col">{{if .Economy}}{{.Economy}}{{else}}N/A{{end}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">Environmental hazards</td><td scope="col">{{if .EnvironmentalHazards}}{{.EnvironmentalHazards}}{{else}}N/A{{end}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col"></td><td scope="col"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <table class="table table-striped table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Main missions</th>
+                                                <th scope="col">Side missions</th>
+                                                <th scope="col">Time Based Mission</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">{{if .MainMissions}}{{.MainMissions}}{{else}}N/A{{end}}</th>
+                                                <th scope="col">{{if .SideMissions}}{{.SideMissions}}{{else}}N/A{{end}}</th>
+                                                <th scope="col">{{if .TimeBasedMission}}{{.TimeBasedMission}}{{else}}N/A{{end}}</th>
+                                            </tr>
+                                        </tbody>
+
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Artifacts</th>
+                                                <th scope="col">Scanner</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">{{if .Artifacts}}{{.Artifacts}}{{else}}N/A{{end}}</th>
+                                                <th scope="col">{{if .Scanner}}{{.Scanner}}{{else}}N/A{{end}}</th>
+                                            </tr>
+                                        </tbody>
+
+
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Main Characters</th>
+                                                <th scope="col">Ships</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">{{if .MainCharacters}}{{.MainCharacters}}{{else}}N/A{{end}}</th>
+                                                <th scope="col">{{if .Ships}}{{.Ships}}{{else}}N/A{{end}}</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12">
+                                    <h4>Description</h4>
+                                    {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                    <h4>Note</h4>
+                                    {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                </div>
+                            </div>
+                            
+                        </div>
+                        {{end}}
+
+                    </div>
+                    
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+</div>
+{{end}}

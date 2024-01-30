@@ -1,0 +1,96 @@
+{{define "content"}}
+    <div class="home-background page-main-container d-flex flex-column align-items-center justify-content-between vh-100">
+
+        <div class="overlay" id="overlay">
+            <div class="upper"></div>
+            <div class="loadbar"></div>
+            <div class="lower"></div>
+        </div>
+
+        <h1 class="d-none">Home</h1>
+        <p class="d-none">Far From Humans</p>
+
+        <div class="moon-background"></div>
+
+        <div class="row g-0 mx-auto pt-2 hub-header">
+            <div class="col-3 text-center local-area-label">
+                <div class="local-area">
+                    <span class="fw-bold">Local Area</span>
+                    <div class="mt-3 local-area-details"> 
+                        <span class="fw-bold">SYSTEM: </span>Eorana 8000-0-0<br>
+                        <span class="fw-bold">Nearby C.B: </span>
+                        Chénmò (moon),
+                        Obsidian (planet)
+                        <br>
+                        <span class="fw-bold">No L.Z found: </span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 text-center hub-top-center">
+
+            </div>
+            <div class="col-3 text-center communication-label">
+                <div class="communication">
+                    <span class="fw-bold">Communication</span>
+                    <div class="mt-3 communication-details"> 
+                        <span class="fw-bold">INPUT: </span><br>
+                        No outstanding entries.<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-0 mx-auto hub-body align-self-center align-items-center" id="hubBody">
+            <div class="col-3">
+                <div class="alert-message" id="alertMessage"></div>
+            </div>
+            <div class="col-8 hub-middle-center speed-label" id="speedDisplay">
+                Speed: <span id="speedValue">1,504,568</span>
+            </div>
+            <div class="col-auto alt-label" id="altDisplay">
+                Alt: <span id="altValue">98,072.00</span>
+            </div>
+        </div>
+
+        <div class="row g-0 mx-auto pb-5 mb-5 hub-footer align-self-end">
+            <div class="col-3 text-center antimatter-label">
+                Antimatter tanks <br>
+                <img src="/static/img/hub/tanks-100.png" class="tanks-picto">
+                <img src="/static/img/hub/tanks-100.png" class="tanks-picto">
+                <img src="/static/img/hub/tanks-25.png" class="tanks-picto">
+                <img src="/static/img/hub/tanks-0.png" class="tanks-picto">
+            </div>
+            <div class="col-6 text-center weapons-label">
+                Weapons<br>
+                <img src="/static/img/hub/icon-railgun.svg" class="hub-picto railgun-picto">
+                <img src="/static/img/hub/icon-ray.svg" class="hub-picto ray-picto">
+                <img src="/static/img/hub/icon-missiles.svg" class="hub-picto">
+                <img src="/static/img/hub/icon-bomb.svg" class="hub-picto">
+                <img src="/static/img/hub/icon-shield.png" class="hub-picto">
+                <br>
+                <span class="railgun-key">M1</span>
+                <span class="ray-key">R</span>
+                <span class="missile-key">M</span>
+                <span class="bomb-key">B</span>
+                <span class="shield-key">S</span>
+            </div>
+            <div class="col-3 text-start ship-state-label">
+                <div class="ship-state-area">
+                    <span class="fw-bold ship-state-title">
+                        Ship state
+                    </span>
+                    <span class="sst elem01">- Shield ................ [OK]</span>
+                    <span class="sst elem02">- Navigation modules .... [OK]</span>
+                    <span class="sst elem03">- Communication modules . [OK]</span>
+                    <span class="sst elem04">- Weaponry modules ...... [OK]</span>
+                    <span class="sst elem05">- LM reactors ........... [OK]</span>
+                    <span class="sst elem06">- FTL reactors .......... [OK]</span>
+                    <span class="sst elem07 fw-bold">- Structural integrity .. 100%</span>
+                    <img src="/static/img/hub/ship-default.png" class="ship-state-display"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/hub.js"></script>
+{{end}}

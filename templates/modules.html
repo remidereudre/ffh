@@ -1,0 +1,173 @@
+{{define "content"}}
+<div class="page-main-container container-fluid content-margin">
+    <div class="row justify-content-center">
+        </div class="col-12">
+            <h1>Modules</h1>
+            <p class="description">The main modules of Far From Humans.</p>
+
+            <div class="row families-row justify-content-center">
+                <div class="col-12 col-lg-8">
+
+                    <h2 data-toggle="collapse" href="#collapseAutopilot" role="button" aria-expanded="false" aria-controls="collapseAutopilot">
+                        Autopilot Modules
+                    </h2>
+                    <div class="row show family-row collapse justify-content-center" id="collapseAutopilot">
+                            {{range .}}
+                            {{if eq .Type "Autopilot"}}
+                            <div class="col-10 my-2">
+                                <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                                <div class="row unite-row primary align-items-center">
+                                    <div class="col-12">
+                                        <h4>{{if .Type}}{{.Type}}{{else}}N/A{{end}}</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="/static/img/modules/{{.ImageURL}}" class="img-fluid bg-white">
+                                    </div>
+                                    <div class="col-8">
+                                        <table class="table table-striped table-dark">
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="col">Environments</td><td scope="col">{{if .Environments}}{{.Environments}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Resources</td><td scope="col">{{if .Resources}}{{.Resources}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Result</td><td scope="col">{{if .Result}}{{.Result}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Special</td><td scope="col">{{if .Special}}{{.Special}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Prix</td><td scope="col">{{if .Prix}}{{.Prix}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Rarity</td><td scope="col">{{if .Rarity}}{{.Rarity}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>Description</h4>
+                                        {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                        <h4>Note</h4>
+                                        {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{end}}
+                            {{end}}
+                        </div>
+
+                    
+                    
+                        <h2 data-toggle="collapse" href="#collapseBooster" role="button" aria-expanded="false" aria-controls="collapseBooster">
+                            Booster Modules
+                        </h2>
+                        <div class="row family-row collapse justify-content-center" id="collapseBooster">
+                            {{range .}}
+                            {{if eq .Type "Booster"}}
+                            <div class="col-10 my-2">
+                                <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                                <div class="row unite-row primary align-items-center">
+                                    <div class="col-12">
+                                        <h4>{{if .Type}}{{.Type}}{{else}}N/A{{end}}</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="/static/img/modules/{{.ImageURL}}" class="img-fluid bg-white">
+                                    </div>
+                                    <div class="col-8">
+                                        <table class="table table-striped table-dark">
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="col">Environments</td><td scope="col">{{if .Environments}}{{.Environments}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Resources</td><td scope="col">{{if .Resources}}{{.Resources}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Result</td><td scope="col">{{if .Result}}{{.Result}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Special</td><td scope="col">{{if .Special}}{{.Special}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Prix</td><td scope="col">{{if .Prix}}{{.Prix}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Rarity</td><td scope="col">{{if .Rarity}}{{.Rarity}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>Description</h4>
+                                        {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                        <h4>Note</h4>
+                                        {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{end}}
+                            {{end}}
+                        </div>
+                
+                        <h2 data-toggle="collapse" href="#collapseTargeting" role="button" aria-expanded="false" aria-controls="collapseTargeting">
+                            Targeting Modules
+                        </h2>
+                        <div class="row family-row collapse justify-content-center" id="collapseTargeting">
+                            {{range .}}
+                            {{if eq .Type "Targeting"}}
+                            <div class="col-10 my-2">
+                                <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                                <div class="row unite-row primary align-items-center">
+                                    <div class="col-12">
+                                        <h4>{{if .Type}}{{.Type}}{{else}}N/A{{end}}</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="/static/img/modules/{{.ImageURL}}" class="img-fluid bg-white">
+                                    </div>
+                                    <div class="col-8">
+                                        <table class="table table-striped table-dark">
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="col">Environments</td><td scope="col">{{if .Environments}}{{.Environments}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Resources</td><td scope="col">{{if .Resources}}{{.Resources}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Result</td><td scope="col">{{if .Result}}{{.Result}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Special</td><td scope="col">{{if .Special}}{{.Special}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Prix</td><td scope="col">{{if .Prix}}{{.Prix}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">Rarity</td><td scope="col">{{if .Rarity}}{{.Rarity}}{{else}}N/A{{end}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>Description</h4>
+                                        {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                        <h4>Note</h4>
+                                        {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{end}}
+                            {{end}}
+                        </div>
+                        
+                    
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+</div>
+{{end}}

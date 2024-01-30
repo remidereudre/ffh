@@ -1,0 +1,152 @@
+{{define "content"}}
+<div class="page-main-container container-fluid content-margin">
+    <div class="row justify-content-center">
+        </div class="col-12">
+            <h1>Brands</h1>
+            <p class="description">The main brands of Far From Humans.</p>
+
+            <div class="row families-row justify-content-center">
+                <div class="col-12 col-lg-8">
+
+                    <!-- Modules manufacturers -->
+                    <h2 data-toggle="collapse" href="#collapseModules" role="button" aria-expanded="false" aria-controls="collapseModules">
+                        Modules manufacturers
+                    </h2>
+                    <div class="row family-row collapse justify-content-center" id="collapseModules">
+                        {{range .}}
+                        {{if eq .Type "Modules manufacturers"}}
+                        <div class="col-10 my-2">
+                            <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                            <div class="row unite-row primary align-items-center">
+                                <div class="col-12">
+                                    <h4>Character sheet</h4>
+                                </div>
+                                <div class="col-4">
+                                    <img src="/static/img/brands/{{.Logo}}" class="img-fluid bg-white">
+                                </div>
+                                <div class="col-8">
+                                    <h4>Description</h4>
+                                    {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                </div>
+                                <div class="col-12">
+                                    <h4>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h4>
+                                    <p>Font: {{if .Font}}{{.Font}}{{else}}N/A{{end}}</h3>
+                                    <h4>Note</h4>
+                                    {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                </div>
+                            </div>
+                        </div>
+                        {{end}}
+                        {{end}}
+    
+                    </div>
+                    
+                    <!-- Voidrunners manufacturers -->
+                    <h2 data-toggle="collapse" href="#collapseVoidrunners" role="button" aria-expanded="false" aria-controls="collapseVoidrunners">
+                        Voidrunners manufacturers
+                    </h2>
+                    <div class="row family-row collapse justify-content-center" id="collapseVoidrunners">
+
+                        {{range .}}
+                        {{if eq .Type "Voidrunners manufacturers"}}
+                        <div class="col-10 my-2">
+                            <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                            <div class="row unite-row primary align-items-center">
+                                <div class="col-12">
+                                    <h4>Character sheet</h4>
+                                </div>
+                                <div class="col-4">
+                                    <img src="/static/img/brands/{{.Logo}}" class="img-fluid bg-white">
+                                </div>
+                                <div class="col-8">
+                                    <h4>Description</h4>
+                                    {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                </div>
+                                <div class="col-12">
+                                    <h4>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h4>
+                                    <p>Font: {{if .Font}}{{.Font}}{{else}}N/A{{end}}</h3>
+                                    <h4>Note</h4>
+                                    {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                </div>
+                            </div>
+                        </div>
+                        {{end}}
+                        {{end}}
+
+                    </div>
+                    
+                    <!-- Weapons manufacturers -->
+                    <h2 data-toggle="collapse" href="#collapseWeapons" role="button" aria-expanded="false" aria-controls="collapseWeapons">
+                        Weapons manufacturers
+                    </h2>
+                    <div class="row family-row collapse justify-content-center" id="collapseWeapons">
+
+                        {{range .}}
+                        {{if eq .Type "Weapons manufacturers"}}
+                        <div class="col-10 my-2">
+                            <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                            <div class="row unite-row primary align-items-center">
+                                <div class="col-12">
+                                    <h4>Character sheet</h4>
+                                </div>
+                                <div class="col-4">
+                                    <img src="/static/img/brands/{{.Logo}}" class="img-fluid bg-white">
+                                </div>
+                                <div class="col-8">
+                                    <h4>Description</h4>
+                                    {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                </div>
+                                <div class="col-12">
+                                    <h4>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h4>
+                                    <p>Font: {{if .Font}}{{.Font}}{{else}}N/A{{end}}</h3>
+                                    <h4>Note</h4>
+                                    {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                </div>
+                            </div>
+                        </div>
+                        {{end}}
+                        {{end}}
+
+                    </div>
+
+                    <!-- Various -->
+                    <h2 data-toggle="collapse" href="#collapseVarious" role="button" aria-expanded="false" aria-controls="collapseVarious">
+                        Various
+                    </h2>
+                    <div class="row family-row collapse justify-content-center" id="collapseVarious">
+    
+                            {{range .}}
+                            {{if eq .Type "Various"}}
+                            <div class="col-10 my-2">
+                                <h3>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h3>
+                                <div class="row unite-row primary align-items-center">
+                                    <div class="col-12">
+                                        <h4>Character sheet</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="/static/img/brands/{{.Logo}}" class="img-fluid bg-white">
+                                    </div>
+                                    <div class="col-8">
+                                        <h4>Description</h4>
+                                        {{if .Description}}{{.Description}}{{else}}N/A{{end}}
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>{{if .Name}}{{.Name}}{{else}}N/A{{end}}</h4>
+                                        <p>Font: {{if .Font}}{{.Font}}{{else}}N/A{{end}}</h3>
+                                        <h4>Note</h4>
+                                        {{if .Note}}{{.Note}}{{else}}N/A{{end}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{end}}
+                            {{end}}
+    
+                        </div>
+                    
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+</div>
+{{end}}
